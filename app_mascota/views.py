@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from django.http import HttpResponse
+
+from app_mascota.forms import MascotaForm
 
 # Create your views here.
 
@@ -15,3 +17,14 @@ def base (request):
 def mascota (request):
     return render(request,'mascota/index.html')
     #return HttpResponse("Esta es la vista de mascotas")
+    
+def mascota_view (request):
+    if request.method == 'POST':
+        form = MascotaForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('mascota:index')
+    else:
+        form = MascotaForm()
+    return render(request, 'mascota/mascota_form.html', {'form': form})
+            
