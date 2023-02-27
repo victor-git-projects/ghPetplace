@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>este es el template de adopcion para inicio</title>
-</head>
-<body style="background-color: red";>
+{% extends 'base/base.html' %}
     
-</body>
-</html>
+
+{% block contenidoQueCambia %} 
+
+<!--
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+
+    
+</form>
+-->
+
+<h1>Este es el titulo del inicio que cambio -- OJO esto es con el index solo para ADOPCION </h1>
+<p> Se ha heredado todo desde la plantilla base</p>
+
+{% endblock %}
