@@ -10,3 +10,8 @@ class Persona(models.Model):
     telefono = models.CharField(max_length=12)
     email = models.EmailField()
     domicilio = models.TextField()
+    
+    
+    #con esto me va devolver el nombre ya que me estaba devolviendo las cosas como objetos
+    def __str__(self):
+        return '{} {}'.format(self.nombre, self.apellidos)

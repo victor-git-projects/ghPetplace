@@ -5,6 +5,11 @@ from app_adopcion.models import Persona  #Esto es para el atributo de uno a much
 
 class Vacuna(models.Model):
     nombre = models.CharField(max_length=50)
+    
+    # esto es para que me devuelva el nombre ya que me estaba devolviendo como objeto
+    
+    def __str__(self):
+        return '{}'.format(self.nombre)
 
 class Mascota(models.Model):
     nombre = models.CharField(max_length=50)

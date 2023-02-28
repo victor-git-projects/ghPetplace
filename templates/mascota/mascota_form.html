@@ -1,20 +1,19 @@
-{% extends 'base/base.htlm' %}
-    {%load static %} 
+{% extends 'base/base.html' %}
+    
 
 {% block contenidoQueCambia %} 
 
-<!--
+<h1>Esta funcionado correctamente el template y estoy usando mascota_form.html</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Guardar</button>
 
-    
+
 </form>
--->
-
-<h1>Este es el titulo del inicio que cambio</h1>
+<!--
+<h1>Este es el titulo del inicio que cambio -- OJO esto es con el index </h1>
 <p> Se ha heredado todo desde la plantilla base</p>
-
+-->
 {% endblock %}
 

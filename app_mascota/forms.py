@@ -3,7 +3,7 @@ from app_mascota.models import Mascota
 
 class MascotaForm (forms.ModelForm):
     class Meta:
-        Mode1 = Mascota
+        model = Mascota
         
         fields = [
             'nombre',
