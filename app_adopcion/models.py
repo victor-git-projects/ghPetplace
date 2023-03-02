@@ -15,3 +15,14 @@ class Persona(models.Model):
     #con esto me va devolver el nombre ya que me estaba devolviendo las cosas como objetos
     def __str__(self):
         return '{} {}'.format(self.nombre, self.apellidos)
+    
+    
+## Empiezo con la creacion de CRUD con dos formularios
+
+class Solicitud(models.Model):
+    persona = models.ForeignKey(Persona, null=True, blank=True, on_delete=models.CASCADE)
+    numero_mascotas = models.IntegerField()
+    razones = models.TextField()
+    
+
+    
