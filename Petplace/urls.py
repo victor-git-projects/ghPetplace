@@ -25,4 +25,6 @@ urlpatterns = [
     #path('adopcion/', adopcion ),
     path('app_mascota/', include('app_mascota.urls')),
     path('app_adopcion/', include('app_adopcion.urls')),
+    path('app_usuario/', include('app_usuario.urls')),
+    
 ]
