@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import LoginView
 #from app_mascota.views import mascota
 #from app_adopcion.views import adopcion
 admin.autodiscover()
@@ -26,5 +27,6 @@ urlpatterns = [
     path('app_mascota/', include('app_mascota.urls')),
     path('app_adopcion/', include('app_adopcion.urls')),
     path('app_usuario/', include('app_usuario.urls')),
+    path('home/', LoginView.as_view(template_name = 'index.html'), name="Home"),
     
 ]

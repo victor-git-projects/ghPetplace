@@ -1,9 +1,9 @@
-{% extends 'base/base.html' %}
+{% extends 'base/secondary_base.html' %}
     
 
 {% block contenidoQueCambia %} 
 
-<h1>Esta funcionado correctamente el template y estoy usando mascota_form.html</h1>
+<h1>Ingresa los datos de tu mascota</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
